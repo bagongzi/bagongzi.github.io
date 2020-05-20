@@ -1,21 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://bagongzi.github.io</id>
-    <title>八公子</title>
-    <updated>2020-05-20T19:01:36.489Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://bagongzi.github.io"/>
-    <link rel="self" href="https://bagongzi.github.io/atom.xml"/>
-    <logo>https://bagongzi.github.io/images/avatar.png</logo>
-    <icon>https://bagongzi.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 八公子</rights>
-    <entry>
-        <title type="html"><![CDATA[Drupal 7.31 SQL注入分析及POC]]></title>
-        <id>https://bagongzi.github.io/post/dy-iELgN7/</id>
-        <link href="https://bagongzi.github.io/post/dy-iELgN7/">
-        </link>
-        <updated>2020-05-20T19:00:52.000Z</updated>
-        <content type="html"><![CDATA[<p>这个漏洞昨天爆出的 ，今天才有时间看代码。</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Drupal 7.31 SQL注入分析及POC | 八公子</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://bagongzi.github.io/favicon.ico?v=1590001290218">
+<link rel="stylesheet" href="https://bagongzi.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="这个漏洞昨天爆出的 ，今天才有时间看代码。
+在Drupal中，执行sql语句都是使用PDO模型进行的，这样做一般来说是可以规避大多数的注入，因为占位符的使用对sql语句的语法进行了限制。
+但是这也不意味着绝对的安全，比如这次的漏洞。
+在Dr..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://bagongzi.github.io">
+        <img src="https://bagongzi.github.io/images/avatar.png?v=1590001290218" class="site-logo">
+        <h1 class="site-title">八公子</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://bagongzi.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Drupal 7.31 SQL注入分析及POC</h2>
+            <div class="post-date">2020-05-21</div>
+            
+            <div class="post-content" v-pre>
+              <p>这个漏洞昨天爆出的 ，今天才有时间看代码。</p>
 <p>在Drupal中，执行sql语句都是使用PDO模型进行的，这样做一般来说是可以规避大多数的注入，因为占位符的使用对sql语句的语法进行了限制。</p>
 <p>但是这也不意味着绝对的安全，比如这次的漏洞。</p>
 <p>在Drupal的user模块中，找到user.module：</p>
@@ -42,59 +124,46 @@
 <p>把我之前的admin用户给覆盖了。POC中的密码是使用了drupal内置的一个生成脚本进行生成的，即scripts中的password-hash.sh。</p>
 <p>这个漏洞威力也很大，因为你控制了对方的数据库，如此灵活的条件，势必会引发更多花样的攻击手段。</p>
 <p>这个漏洞给我的感受就是：“没有绝对的安全”。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[typecho后台文件对应说明]]></title>
-        <id>https://bagongzi.github.io/post/typecho-hou-tai-wen-jian-dui-ying-shuo-ming/</id>
-        <link href="https://bagongzi.github.io/post/typecho-hou-tai-wen-jian-dui-ying-shuo-ming/">
-        </link>
-        <updated>2020-05-20T18:23:39.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>welcome.php	        博客首次安装成功的欢迎界面
-common.php	        检测是否为第一次登陆，检测程序是否可有升级
-common-js.php	        消息处理及后台菜单展开的js
-upgrade.php	        程序升级引导
-login.php	        登陆界面
-register.php	        用户注册页面
-header.php	        头部加载css和js等
-copyright.php	        版权声明
-form-js.php	        form对应的js
-table-js.php	        table对应的js
-footer.php	        页脚
-menu.php	        菜单导航条
-extending.php	        插件拓展后台菜单的接口
-page-title.php	        页面标题
-index.php	        进入后台的首页，对应菜单为网站概要
-profile.php	        个人设置
-plugins.php	        插件管理
-options-plugin.php	插件设置页面
-themes.php	        网站外观
-theme-editor.php	编辑模板的页面
-options-theme.php	设置模板的页面即模板后台
-write-post.php	        文章撰写页面
-write-js.php	        撰写文章/页面时的发布时间，标签，分类，保存草稿，高价设置等
-file-upload.php	        文章/页面附件上传，及管理界面
-file-upload-js.php	文章/页面附件上传，及管理功能
-custom-fields.php	自定义字段界面
-custom-fields-js.php	自定义字段功能实现
-editor-js.php	        编辑器
-write-page.php	        创建页面
-manage-posts.php	管理文章界面
-manage-pages.php	管理页面界面
-manage-comments.php	管理评论界面
-manage-categories.php	管理分类界面
-category.php	        某个分类的编辑页面
-manage-tags.php	        管理标签界面
-manage-medias.php	所有文章的附件管理页面
-media.php	        某个附件的管理
-manage-users.php	所有用户管理页面
-user.php	        编辑某个用户
-options-general.php	网站基本设置页面
-options-discussion.php	评论设置页面
-options-reading.php	阅读设置页面
-options-permalink.php	永久链接设置页面
 
-![](https://bagongzi.github.io/post-images/1590001148065.png)</code></pre>
-]]></content>
-    </entry>
-</feed>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://bagongzi.github.io/post/typecho-hou-tai-wen-jian-dui-ying-shuo-ming/">
+                  <h3 class="post-title">
+                    typecho后台文件对应说明
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
