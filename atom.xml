@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bagongzi.github.io</id>
+    <title>Gridea</title>
+    <updated>2020-05-20T18:54:36.842Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://bagongzi.github.io"/>
+    <link rel="self" href="https://bagongzi.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://bagongzi.github.io/images/avatar.png</logo>
+    <icon>https://bagongzi.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[typecho后台文件对应说明]]></title>
+        <id>https://bagongzi.github.io/post/typecho-hou-tai-wen-jian-dui-ying-shuo-ming/</id>
+        <link href="https://bagongzi.github.io/post/typecho-hou-tai-wen-jian-dui-ying-shuo-ming/">
+        </link>
+        <updated>2020-05-20T18:23:39.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>welcome.php	        博客首次安装成功的欢迎界面
+common.php	        检测是否为第一次登陆，检测程序是否可有升级
+common-js.php	        消息处理及后台菜单展开的js
+upgrade.php	        程序升级引导
+login.php	        登陆界面
+register.php	        用户注册页面
+header.php	        头部加载css和js等
+copyright.php	        版权声明
+form-js.php	        form对应的js
+table-js.php	        table对应的js
+footer.php	        页脚
+menu.php	        菜单导航条
+extending.php	        插件拓展后台菜单的接口
+page-title.php	        页面标题
+index.php	        进入后台的首页，对应菜单为网站概要
+profile.php	        个人设置
+plugins.php	        插件管理
+options-plugin.php	插件设置页面
+themes.php	        网站外观
+theme-editor.php	编辑模板的页面
+options-theme.php	设置模板的页面即模板后台
+write-post.php	        文章撰写页面
+write-js.php	        撰写文章/页面时的发布时间，标签，分类，保存草稿，高价设置等
+file-upload.php	        文章/页面附件上传，及管理界面
+file-upload-js.php	文章/页面附件上传，及管理功能
+custom-fields.php	自定义字段界面
+custom-fields-js.php	自定义字段功能实现
+editor-js.php	        编辑器
+write-page.php	        创建页面
+manage-posts.php	管理文章界面
+manage-pages.php	管理页面界面
+manage-comments.php	管理评论界面
+manage-categories.php	管理分类界面
+category.php	        某个分类的编辑页面
+manage-tags.php	        管理标签界面
+manage-medias.php	所有文章的附件管理页面
+media.php	        某个附件的管理
+manage-users.php	所有用户管理页面
+user.php	        编辑某个用户
+options-general.php	网站基本设置页面
+options-discussion.php	评论设置页面
+options-reading.php	阅读设置页面
+options-permalink.php	永久链接设置页面</code></pre>
+]]></content>
+    </entry>
+</feed>
